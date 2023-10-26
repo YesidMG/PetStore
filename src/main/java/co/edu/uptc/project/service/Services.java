@@ -21,5 +21,9 @@ public class Services {
 	public ArrayList<Pet> getPets (){
 		return (ArrayList<Pet>)petRepository.findAll();
 	}
+	
+	public Pet savePet(Pet pet) {
+		return petRepository.save(pet);
+	}
 }
 
