@@ -25,5 +25,13 @@ public class Services {
 	public Pet savePet(Pet pet) {
 		return petRepository.save(pet);
 	}
+
+	public Pet updatePetById (Pet request, int id){
+		Pet pet = petRepository.findById(id).get();
+		pet.setName(request.getName());
+		pet.setAnimal(request.getAnimal());
+		petRepository.save(pet);
+		return pet;
+	}
 }
 
