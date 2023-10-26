@@ -33,5 +33,14 @@ public class Services {
 		petRepository.save(pet);
 		return pet;
 	}
+	
+	public Boolean deletePet (int id) {
+		try {
+			petRepository.deleteById(id);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
 }
 
