@@ -9,6 +9,7 @@ Este proyecto es una aplicación Java que utiliza Spring Boot 3.1.4 para exponer
 - Silvia
 - Alejandro
 - David
+- Brayan Daniel Fuquene Sandoval
 
 ## Requisitos del Entorno
 
