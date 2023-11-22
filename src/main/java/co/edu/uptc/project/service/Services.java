@@ -8,10 +8,11 @@ import org.springframework.stereotype.Service;
 
 import co.edu.uptc.project.model.Pet;
 import co.edu.uptc.project.repository.IPetRepository;
+import co.edu.uptc.project.serviceInteface.ServiceInterface;
 
 
 @Service
-public class Services {
+public class Services implements ServiceInterface {
 
 	@Autowired
 	IPetRepository petRepository;

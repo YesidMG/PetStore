@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Service Tester</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Pet Service Tester</h1>
+
+    <!-- Formulario para obtener una mascota por ID -->
+    <form id="getPetForm" class="form">
+        <fieldset>
+            <legend>Obtener Mascota por ID</legend>
+            <label for="petId">ID de la mascota:</label>
+            <input type="number" id="petId" name="petId" required>
+            <button type="button" onclick="getPetById()">Obtener Mascota por ID</button>
+        </fieldset>
+    </form>
+
+    <!-- Resultado de la obtención de la mascota por ID -->
+    <div id="getPetResult" class="result">
+        <h3>Get Pet by ID Result</h3>
+        <table id="getPetTable"></table>
+    </div>
+
+    <!-- Formulario para obtener todas las mascotas -->
+    <button type="button" onclick="getAllPets()">Obtener Todas las Mascotas</button>
+
+    <!-- Resultado de la obtención de todas las mascotas -->
+    <div id="getAllPetsResult" class="result">
+        <h3>Get All Pets Result</h3>
+        <table id="getAllPetsTable"></table>
+    </div>
+
+    <!-- Formulario para guardar una nueva mascota -->
+    <form id="savePetForm" class="form">
+        <fieldset>
+            <legend>Guardar Nueva Mascota</legend>
+            <label for="petName">Nombre de la mascota:</label>
+            <input type="text" id="petName" name="petName" required>
+            <label for="petAnimal">Tipo de animal:</label>
+            <input type="text" id="petAnimal" name="petAnimal" required>
+            <button type="button" onclick="savePet()">Guardar Mascota</button>
+        </fieldset>
+    </form>
+
+    <!-- Resultado de guardar una nueva mascota -->
+    <div id="savePetResult" class="result">
+        <h3>Save Pet Result</h3>
+        <table id="savePetTable"></table>
+    </div>
+
+    <!-- Formulario para actualizar una mascota por ID -->
+    <form id="updatePetForm" class="form">
+        <fieldset>
+            <legend>Actualizar Mascota por ID</legend>
+            <label for="updatePetId">ID de la mascota a actualizar:</label>
+            <input type="number" id="updatePetId" name="updatePetId" required>
+            <label for="updatePetName">Nuevo nombre de la mascota:</label>
+            <input type="text" id="updatePetName" name="updatePetName" required>
+            <label for="updatePetAnimal">Nuevo tipo de animal:</label>
+            <input type="text" id="updatePetAnimal" name="updatePetAnimal" required>
+            <button type="button" onclick="updatePet()">Actualizar Mascota</button>
+        </fieldset>
+    </form>
+
+    <!-- Resultado de actualizar una mascota -->
+    <div id="updatePetResult" class="result">
+        <h3>Update Pet Result</h3>
+        <table id="updatePetTable"></table>
+    </div>
+
+    <!-- Formulario para eliminar una mascota por ID -->
+    <form id="deletePetForm" class="form">
+        <fieldset>
+            <legend>Eliminar Mascota por ID</legend>
+            <label for="deletePetId">ID de la mascota a eliminar:</label>
+            <input type="number" id="deletePetId" name="deletePetId" required>
+            <button type="button" onclick="deletePet()">Eliminar Mascota</button>
+        </fieldset>
+    </form>
+
+    <!-- Resultado de eliminar una mascota -->
+    <div id="deletePetResult" class="result">
+        <h3>Delete Pet Result</h3>
+        <table id="deletePetTable"></table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

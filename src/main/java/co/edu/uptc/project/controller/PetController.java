@@ -34,4 +34,15 @@ public class PetController {
 	public Pet updatePetById (@RequestBody Pet reques, @PathVariable("id")int id) {
 		return this.service.updatePetById(reques, id);
 	}
+	@DeleteMapping(path = "/{id}")
+	public String deleteById(@PathVariable ("id") int id) {
+		boolean process = this.service.deletePet(id);
+		
+		if(process) {
+			return "The pet has been successfully removed";
+		}else {
+			return "A problem has occurred, the selected pet could not be deleted";
+		}
+	}
+
 }

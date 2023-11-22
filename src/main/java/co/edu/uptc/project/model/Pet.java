@@ -10,44 +10,40 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "pet")
 public class Pet {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
-	
-	@Column(name = "name")
-	private String name;
-	
-	@Column(name = "animal_type")
-	private String animal;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    
+    @Column(name = "name")
+    private String name;
+    
+    @Column(name = "animal_type")
+    private String animal;
 
-	
-	//Getters and Setters
-	
-	public int getId() {
-		return id;
-	}
+    // Getters and Setters
+    
+    public int getId() {
+        return id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public String getAnimal() {
-		return animal;
-	}
+    public String getAnimal() {
+        return animal;
+    }
 
-	public void setAnimal(String animal) {
-		this.animal = animal;
-	}
-	
-	
-
+    public void setAnimal(String animal) {
+        this.animal = animal;
+    }
 }
